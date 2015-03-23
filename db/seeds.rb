@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Note.delete_all
+
+Notes = Note.create ([
+     {title: "title blah", content: "content blah" },
+     {title: "title blah 2", content: "content blah2" }
+	])
