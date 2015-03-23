@@ -1,8 +1,8 @@
-angular.module('NoteWrangler').controller('NotesIndexController', function(Note,$scope){
+angular.module('NoteWrangler').controller('NotesIndexController', function(note,$scope){
 
 
 // links into Note factory
- $scope.notes = Note.query();
+ $scope.notes = note.query();
 // console.log($scope.notes);
 
 });
