@@ -7,7 +7,7 @@ class NotesController < ApplicationController
     @notes = Note.all
 
   respond_to do |format|
-      format.html # index.html.erb
+      format.html 
       format.json { render json: @notes }
     end
   end
@@ -15,7 +15,12 @@ class NotesController < ApplicationController
   # GET /notes/1
   # GET /notes/1.json
   def show
-    
+    @note = Note.find(params[:id])
+
+     respond_to do |format|
+      format.html 
+      format.json { render json: @note }
+    end
   end
 
   # GET /notes/new
