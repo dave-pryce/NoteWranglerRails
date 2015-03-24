@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :notes
+ resources :notes, :defaults => {:format => :json}
 
  root to: 'notes#index'
 
