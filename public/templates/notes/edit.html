@@ -1,5 +1,8 @@
+<div class="well">
 <h1>Edit: {{note.title}}</h1>
 <form>
+
+
 
 	<fieldset class="form-group">
 		<label for="title">Title</label>
@@ -17,11 +20,12 @@
 
 	<fieldset class="form-group">
 		<label for="content">Content</label>
-		<textarea class="form-control" type="text" id="content" name ="contentn" ng-model="note.content">
+		<textarea class="form-control" type="text" id="content" name ="contentn" ng-model="note.content"> </textarea>
 	</fieldset>
 
-	<fieldset class="form-group">
-		<input type="submit" class="btn btn-default">
-	</fieldset>	
+
+	<input type="submit" class="btn btn-default" ng-click="saveNote(note)" ng-disabled="submitting">
+
+	</div>
 
 </form>
