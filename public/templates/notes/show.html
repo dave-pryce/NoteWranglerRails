@@ -4,11 +4,12 @@
 	<!-- to do create user table and link by id to note -->
 	<small>{{note.user.name}} </small>
 
+	<h3>{{note.description}}</h3><br>
+	<p>{{note.content}} </p>
 
-<p>{{note.content}} </p>
-<!-- to do create category table and link by id to note -->
-<p><span class="label label-info">{{note.category.name}}</span></p>
-<a ng-href="#/notes/{{note.id}}/edit" class="btn btn-default">Edit Note</a>
-<a href="" ng-click="deleteNote(note)" class="btn btn-danger">Delete Note</a>
-</div>
-</div>
+	<!-- to do create category table and link by id to note -->
+	<p><span class="label label-info">{{note.category.name}}</span></p>
+	<a ng-href="#/notes/{{note.id}}/edit" class="btn btn-default">Edit Note</a>
+	<a href="" ng-click="deleteNote(note)" class="btn btn-danger">Delete Note</a>
+	</div>
+	</div>
