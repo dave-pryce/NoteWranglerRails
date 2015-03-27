@@ -21,3 +21,14 @@ Notes = Note.create ([
      {title: "Valley", description: "Turned it up should no valley cousin he.", content: "Turned it up should no valley cousin he. Speaking numerous ask did horrible packages set. Ashamed herself has distant can studied mrs. Led therefore its middleton perpetual fulfilled provision frankness. Small he drawn after among every three no. All having but you edward genius though remark one. " },
      {title: "Compliment", description: "Compliment interested discretion estimating on stimulated apartments oh.", content: "Compliment interested discretion estimating on stimulated apartments oh. Dear so sing when in find read of call. As distrusts behaviour abilities defective is. Never at water me might. On formed merits hunted unable merely by mr whence or. Possession the unpleasing simplicity her uncommonly. " }
 	])
+
+
+User.delete_all
+
+Users = User.create ([
+     {name: "M Mouse", bio:"Squeek, squeek", site: "www.mmouse.mouse"},
+     {name: "D Duck", bio:"Quack Quack", site: "www.dduck.duck"},
+     {name: "P Sheep", bio:"Baa, Baa", site: "www.baba.sheep"},
+     {name: "K Kitten", bio:"Meow Meow", site: "www.cat.cat"},
+     {name: "P Dog", bio:"Woof Woof", site: "www.woof.woof"}
+     ])
