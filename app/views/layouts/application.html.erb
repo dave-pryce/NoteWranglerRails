@@ -9,22 +9,23 @@
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#/notes">
-    <!--    <img alt="notewrangler" src="/images/note.png"> -->
-    <h3 class="navbar-text navbar-left" >Note Wrangler</h3>
-      </a>
-    	
-    	<a href="#/users" class="navbar-text navbar-left" >Users</a>
-
-      
+      <div class="navbar-brand">
+        <a href="/#/">NoteWrangler</a>
+      </div>
     </div>
+      <!-- custom directive -->
+      <nw-page-nav></nw-page-nav>
   </div>
+
+   
+
+
 </nav>
 
-	<div ng-view class="container-fluid"> </div>
+<div ng-view class="container-fluid"> </div>
 
 
 
