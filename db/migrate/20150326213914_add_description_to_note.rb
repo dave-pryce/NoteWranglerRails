@@ -1,6 +1,5 @@
 class AddDescriptionToNote < ActiveRecord::Migration
   def change
-  	add_column :notes, :description, :string
-  	change_column :notes, :content, :text
+  	add_column :notes, :category, :string
   end
 end
