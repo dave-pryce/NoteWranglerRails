@@ -17,9 +17,17 @@
 	</fieldset>
 
 
+<!--	<p ng-repeat="category in categories">
+		{{category.id}}
+		{{category.category}}
+	</p>
+-->
+
+
 	<fieldset class="form-group">
 		<label for="category">Category</label>
-		<input class="form-control" type="text" id="category" name ="category" ng-model="note.categories_id">
+		<select ng-options="categories_id as category.category for category in categories" ng-model="note.categories_id"></select>
+
 	</fieldset>
 
 
