@@ -9,4 +9,7 @@ Rails.application.routes.draw do
 # enables users.json url to work
  resources :users, :defaults => {:format => :json}
 
+ # enables categories.json url to work
+ resources :categories, :defaults => {:format => :json}
+
 end

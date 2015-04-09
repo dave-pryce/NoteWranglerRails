@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150408100540) do
+ActiveRecord::Schema.define(version: 20150408224205) do
 
   create_table "categories", force: true do |t|
     t.string   "category"
@@ -21,12 +21,14 @@ ActiveRecord::Schema.define(version: 20150408100540) do
 
   create_table "notes", force: true do |t|
     t.string   "title"
-    t.text     "content",     limit: 255
+    t.text     "content",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "description"
-    t.integer  "categoryid"
+    t.integer  "categories_id"
   end
+
+  add_index "notes", ["categories_id"], name: "index_notes_on_categories_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
