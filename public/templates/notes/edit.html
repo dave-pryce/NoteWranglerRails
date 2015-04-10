@@ -20,15 +20,24 @@
 <!--	<p ng-repeat="category in categories">
 		{{category.id}}
 		{{category.category}}
+
 	</p>
+	<p>categories_id: {{note.categories_id}}</p>
+
+
+	<fieldset class="form-group">
+		<label for="categories_id">Category Id</label>
+		<input  class="form-control" type="text" id="categories_id" ng-model="note.categories_id">
+	</fieldset>
+
 -->
 
 
 	<fieldset class="form-group">
 		<label for="category">Category</label>
-		<select ng-options="categories_id as category.category for category in categories" ng-model="note.categories_id"></select>
-
+		<select ng-options="note.categories_id as category.category for category in categories" ng-model="note.categories_id"></select>
 	</fieldset>
+
 
 
 

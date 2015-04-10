@@ -7,10 +7,10 @@
 	<h3>{{note.description}}</h3><br>
 	<p>{{note.content}} </p>
 
-	<!-- category added as name directly to notes -->
 	<!-- to do create category table and link by id to note -->
+	<h4><span class="label label-info">{{note.category.category}}</span></h4>
 	<h4><span class="label label-info">{{note.categories_id}}</span></h4>
 	<a ng-href="#/notes/{{note.id}}/edit" class="btn btn-default">Edit Note</a>
 	<a href="" ng-click="deleteNote(note)" class="btn btn-danger">Delete Note</a>
 	</div>
-	</div>
+	</div> 
