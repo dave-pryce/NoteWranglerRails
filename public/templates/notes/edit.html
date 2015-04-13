@@ -16,15 +16,19 @@
 		<input class="form-control" type="text" id="description" name ="description" ng-model="note.description">
 	</fieldset>
 
+
+	<fieldset class="form-group">
+		<label for="description">Category ID</label>
+		<input class="form-control" type="text" id="Category ID" name ="Category ID" ng-model="note.categories_id">
+	</fieldset>
+
+
 	<fieldset class="form-group">
 		<label for="category">Category</label>
 		<!-- note from service categories_id field in json -->
 		<select ng-options="note.categories_id as category.category for category in categories" ng-model="note.categories_id" ></select>
 	</fieldset>
 
-
-	<h4><span class="label label-info">{{note.categories_id}} {{note.category.category}}</span></h4>
-	{{note.categories_id.category}}
 
 	<fieldset class="form-group">
 		<label for="content">Content</label>
