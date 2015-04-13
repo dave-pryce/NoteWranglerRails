@@ -3,6 +3,7 @@ angular.module('NoteWrangler').controller('NotesEditController', function(note, 
 	$scope.submitting = false;
 	// querying from category service
 	$scope.categories = category.query();
+	
 
 	$scope.saveNote = function(note){
 		$scope.submitting = true;
