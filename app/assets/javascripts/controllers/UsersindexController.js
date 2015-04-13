@@ -1,8 +1,8 @@
-angular.module('NoteWrangler').controller('UsersIndexController', function(user,$scope){
+angular.module('NoteWrangler').controller('UsersIndexController', function(User,$scope){
 
 
 // links into user factory
- $scope.users = user.query();
+ $scope.users = User.query();
 
 
 });

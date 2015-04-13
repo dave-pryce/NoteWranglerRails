@@ -1,4 +1,4 @@
-angular.module('NoteWrangler').controller('UsersShowController', function(user, $scope, $routeParams){
-	$scope.user = user.get({id: $routeParams.id});
+angular.module('NoteWrangler').controller('UsersShowController', function(User, $scope, $routeParams){
+	$scope.user = User.get({id: $routeParams.id});
 
 });

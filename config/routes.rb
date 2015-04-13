@@ -4,7 +4,7 @@ Rails.application.routes.draw do
  root to: 'notes#index'
 
 # enables notess.json url to work
- resources :notes#, :defaults => {:format => :json}
+ resources :notes, :defaults => {:format => :json}
 
 # enables users.json url to work
  resources :users, :defaults => {:format => :json}

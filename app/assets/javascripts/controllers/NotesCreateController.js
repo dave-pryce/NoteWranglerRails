@@ -1,4 +1,4 @@
-angular.module('NoteWrangler').controller('NotesCreateController', function($scope, note, $location){
+angular.module('NoteWrangler').controller('NotesCreateController', function($scope, Note, $location){
 	$scope.note = new note();
 	$scope.submitting = false;
 
