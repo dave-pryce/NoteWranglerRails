@@ -4,5 +4,6 @@ angular.module('NoteWrangler').controller('NotesIndexController', function(Note,
 // links into Note factory
  $scope.notes = Note.query();
 // console.log($scope.notes);
+ $scope.search = {};
 
 });
