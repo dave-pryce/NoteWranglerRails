@@ -2,5 +2,5 @@
 
 <p><%= @note.title %></p>
 <p><%= @note.content %></p>
-<p><%= @note.categories_id %></p>
-<p><%= @note.category %></p>
+<p><%= @note.category_id %> :<%= @note.category.category %></p>
+<p><%= @note.user_id %> : <%= @note.user.name %> </p>
