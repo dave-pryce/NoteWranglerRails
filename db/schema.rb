@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150413214925) do
+ActiveRecord::Schema.define(version: 20150414225303) do
 
   create_table "categories", force: true do |t|
     t.string   "category"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20150413214925) do
     t.string   "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
 end

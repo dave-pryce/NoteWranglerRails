@@ -3,5 +3,10 @@ angular.module("NoteWrangler").directive('title', function($timeout){
     $timeout(function(){
       $(element).tooltip()
     });
+
+    // clean up to prevent memory leak.
+    scope.$on('$destroy', function(){
+    	$(element).tooltip('destroy');
+    })
   }
 });
