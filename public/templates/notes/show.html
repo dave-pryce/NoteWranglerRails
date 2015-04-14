@@ -1,15 +1,15 @@
 <div class="page-header"> 
 	<div class ="well">
 	<h1>{{note.title}} </h1><br>
-	<!-- to do create user table and link by id to note -->
+	
 	<small>{{note.user_id}} </small>
-	<small>{{note.user.name}} </small>
+	<h4>{{note.user.name}} </h4>
 
 	<h3>{{note.description}}</h3><br>
 	<p>{{note.content}} </p>
 
 	<h4><span class="label label-info">{{note.category_id}}</span></h4>
-	<h4><span class="label label-info">{{note.category.category}}</span></h4>
+	<h4><span class="label label-info">{{category.category}}</span></h4>
 
 	<a ng-href="#/notes/{{note.id}}/edit" class="btn btn-default">Edit Note</a>
 	<a href="" ng-click="deleteNote(note)" class="btn btn-danger">Delete Note</a>

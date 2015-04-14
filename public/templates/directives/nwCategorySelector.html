@@ -1,5 +1,7 @@
 <div class="nw-category-selector btn-group" role="group">
 	<a href=""
 	ng-repeat="category in categories"
-	class="btn btn-default">{{category.category}}</a>
+	class="btn btn-default"
+	ng-class="{'active' : isActive(category)}"
+	ng-click="toggleCategory(category)">{{category.category}}</a>
 </div>
