@@ -1,7 +1,9 @@
 <h1>Notes <a class="btn btn-default" href="#/notes/new">New Note</a></h1>
 
-<div class="form-group">
-Search:  <input type='text' ng-model="search.input.$">
+<div class="panel panel-info">
+  <div class="panel-body">
+		Search:  <input type='text' ng-model="search.input.$">
+  </div>
 </div>
 
 <div class="form-group">
@@ -12,11 +14,12 @@ Search:  <input type='text' ng-model="search.input.$">
 	<div class="col-sm-6" ng-repeat="note in  notes | categoryFilter:search.category | filter:search.input">		
 
 		<div class="panel panel-default">
-			<h2 class="panel-heading"><a class="panel-heading" ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
+			<h2 class="panel-heading"><a title="{{note.user_id}}" class="panel-heading" ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
 			<div class="panel-body">
 				<p>{{note.content}}</p>
 				<h4><span class="label label-info">{{note.category_id}}</span></h4>
 				<h4><span class="label label-info">{{note.category.category}}</span></h4>
+				<h4><span class="label label-info" ng-show="category.category"></span></h4>
 			</div>
 		</div>
 	</div>
