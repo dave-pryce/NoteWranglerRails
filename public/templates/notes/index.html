@@ -1,18 +1,26 @@
 <h1>Notes <a class="btn btn-default" href="#/notes/new">New Note</a></h1>
 
 <div class="form-group">
-Search:<input type='text' ng-model="search.input.$">
+Search:  <input type='text' ng-model="search.input.$">
 </div>
 
+<div class="form-group">
 <nw-category-selector ng-model="search.category">  </nw-category-selector>
+</div>
 
 <div class="row">
-	<div class="col-sm-6" ng-repeat="note in  notes | categoryFilter:search.category | filter:search.input">
-		<div class="well">
-		<h2><a ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
-		<p>{{note.content}}</p>
-		<h4><span class="label label-info">{{note.category_id}}</span></h4>
-		<h4><span class="label label-info">{{note.category.category}}</span></h4>
+	<div class="col-sm-6" ng-repeat="note in  notes | categoryFilter:search.category | filter:search.input">		
+
+		<div class="panel panel-default">
+			<h2 class="panel-heading"><a class="panel-heading" ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
+			<div class="panel-body">
+				<p>{{note.content}}</p>
+				<h4><span class="label label-info">{{note.category_id}}</span></h4>
+				<h4><span class="label label-info">{{note.category.category}}</span></h4>
+			</div>
 		</div>
 	</div>
 </div>
+
+
+
