@@ -1,4 +1,4 @@
-angular.module('NoteWrangler').controller('NotesIndexController', function(Note,$scope){
+angular.module('NoteWrangler').controller('NotesIndexController', function(Note, $scope){
 
 
 // links into Note factory

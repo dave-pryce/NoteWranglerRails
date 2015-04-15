@@ -1,6 +1,10 @@
-angular.module('NoteWrangler').controller('NotesCreateController', function($scope, Note, $location){
-	$scope.note = new note();
+angular.module('NoteWrangler').controller('NotesCreateController', function(Note, User, Category, $scope,  $location){
+	$scope.note = new Note();
 	$scope.submitting = false;
+
+	// querying from category and user services
+	$scope.categories = Category.query();
+	$scope.users = User.query();
 
 	$scope.saveNote = function(note){
 		$scope.submitting = true;

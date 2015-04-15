@@ -1,12 +1,18 @@
-<div class ="well">
-	<div class="pull-left">
-
+<div class="panel panel-info">
+			<div class="panel-heading">
+				<h2><a ng-href="#/users/{{user.id}}">{{user.name}}</a></h2>
+			</div>
+	
+			<div class="panel-body">
 				<gravatar email="user.email"></gravatar>
-	</div>
-	<h1>{{user.name}} </h1><br>
-	<a ng-href="{{user.site}}">{{user.site}}</a>
-	<p>{{user.bio}} </p>
-	<p>{{email}} </p>
+				<p>{{bio}}</p>
+			</div>
+
+			<div class="panel-footer">
+				<p>{{user.email}}
+				<p>{{user.site}}</p>	
+			</div>
+
 </div>
 
 
