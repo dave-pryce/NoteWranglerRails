@@ -8,7 +8,7 @@ angular.module('NoteWrangler').controller('NotesEditController', function(Note, 
 
 	$scope.saveNote = function(note){
 		$scope.submitting = true;
-		Note.$update().finally(function(){
+		note.$update().finally(function(){
 			$scope.submitting = false;
 			$location.path("/notes/" + note.id)
 		});

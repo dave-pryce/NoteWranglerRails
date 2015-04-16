@@ -26,8 +26,8 @@ Notes = Note.create ([
 User.delete_all
 
 Users = User.create ([
-     {name: "M Mouse", bio:"Squeek, squeek", site: "www.mmouse.mouse"},
-     {name: "D Duck", bio:"Quack Quack", site: "www.dduck.duck"},
+     {name: "M Mouse", bio:"Mickey Mouse is a funny animal cartoon character and the official mascot of The Walt Disney Company. He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928. An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey has become one of the most recognizable cartoon characters in the world.", site: "www.mmouse.mouse", email: "dpryce@seek.com.au"},
+     {name: "D Duck", bio:"Donald Duck is a cartoon character created in 1934, at Walt Disney Productions. Donald is an anthropomorphic white duck with a yellow-orange bill, legs, and feet. He typically wears a sailor shirt and cap with a black or red bow tie. Donald is most famous for his semi-intelligible speech and his mischievous and temperamental personality. Along with his friend Mickey Mouse, Donald is one of the most popular Disney characters and was included in TV Guide's list of the 50 greatest cartoon characters of all time in 2002.[1] He has appeared in more films than any other Disney character,[2] and is the most published comic book character in the world outside of the superhero genre.", site: "www.dduck.duck"},
      {name: "P Sheep", bio:"Baa, Baa", site: "www.baba.sheep"},
      {name: "K Kitten", bio:"Meow Meow", site: "www.cat.cat"},
      {name: "P Dog", bio:"Woof Woof", site: "www.woof.woof"}
