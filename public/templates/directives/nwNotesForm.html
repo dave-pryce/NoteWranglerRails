@@ -1,31 +1,33 @@
-	<form>
+	<form name = "notesForm" novalidate>
 		<div class="panel-body">
 			<fieldset class="form-group">
 				<label for="title">Title</label>
-				<input class="form-control" type="text" id="title" name ="title" ng-model="note.title">
+				<input class="form-control" type="text" id="title" name ="title" ng-model="note.title" required>
+				<span ng-show="notesForm.title.$dirty && notesForm.title.$invalid">
+				<span class="form-group has-error" ng-show="notesForm.title.$error.required">Title is required.</span>
+
 			</fieldset>
 
-			<!-- to do add description to note model -->
 			<fieldset class="form-group">
 				<label for="description">Description</label>
-				<input class="form-control" type="text" id="description" name ="description" ng-model="note.description">
+				<input class="form-control" type="text" id="description" name ="description" ng-model="note.description" required>
 			</fieldset>
 
 			<fieldset class="form-group">
 				<label for="category">Category</label>
 				<!-- note from service category_id field in json -->
-				<select ng-options="category.id as category.category for category in categories" ng-model="note.category_id" ></select>
+				<select ng-options="category.id as category.category for category in categories" ng-model="note.category_id" required></select>
 			</fieldset>
 
 			<fieldset class="form-group">
 				<label for="User">User</label>
 				<!-- user from service user_id field in json -->
-				<select ng-options="user.id as user.name for user in users" ng-model="note.user_id" ></select>
+				<select ng-options="user.id as user.name for user in users" ng-model="note.user_id" required></select>
 			</fieldset>
 
 			<fieldset class="form-group">
 				<label for="content">Content</label>
-				<textarea class="form-control" type="text" id="content" name ="content" ng-model="note.content"> </textarea>
+				<textarea class="form-control" rows="5" type="text" id="content" name ="content" ng-model="note.content" required> </textarea>
 			</fieldset>
 		</div>
 	</form>
