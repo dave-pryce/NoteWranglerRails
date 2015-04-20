@@ -3,15 +3,8 @@
 		<h1>New: {{note.title}}</h1>
 	</div>
 
-
   	   <!-- custom directive for form -->
-  	   <!--div ng-include src="'/templates/users/NotesForm.html'"></div>-->
+  	   <!--div ng-include src="'/templates/notes/nwNotesForm.html'"></div>-->
        <nw-notes-form></nw-notes-form>
-
-
-
-	<div class="panel-footer">
-		<input type="submit" value="{{submitting ? 'saving....' : 'save'}}" class="btn btn-default" ng-click="saveNote(note)" ng-disabled="submitting">
-	</div>
 
 </div>

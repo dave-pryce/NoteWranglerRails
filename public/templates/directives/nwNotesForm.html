@@ -3,14 +3,19 @@
 			<fieldset class="form-group">
 				<label for="title">Title</label>
 				<input class="form-control" type="text" id="title" name ="title" ng-model="note.title" required>
+				<!-- Basic validation -->
 				<span ng-show="notesForm.title.$dirty && notesForm.title.$invalid">
-				<span class="form-group has-error" ng-show="notesForm.title.$error.required">Title is required.</span>
+				<span ng-show="notesForm.title.$error.required">Title is required.</span>
 
 			</fieldset>
 
 			<fieldset class="form-group">
 				<label for="description">Description</label>
 				<input class="form-control" type="text" id="description" name ="description" ng-model="note.description" required>
+				
+				<!-- Basic validation -->
+				<span ng-show="notesForm.description.$dirty && notesForm.description.$invalid">
+				<span ng-show="notesForm.description.$error.required">Description is required.</span>
 			</fieldset>
 
 			<fieldset class="form-group">
@@ -22,12 +27,24 @@
 			<fieldset class="form-group">
 				<label for="User">User</label>
 				<!-- user from service user_id field in json -->
-				<select ng-options="user.id as user.name for user in users" ng-model="note.user_id" required></select>
+				<select ng-options="user.id as user.name for user in users" ng-model="note.user_id" required ></select>
 			</fieldset>
 
 			<fieldset class="form-group">
-				<label for="content">Content</label>
+				<label for="content">Note Content</label>
 				<textarea class="form-control" rows="5" type="text" id="content" name ="content" ng-model="note.content" required> </textarea>
+				<!-- Basic validation -->
+				<span ng-show="notesForm.content.$dirty && notesForm.content.$invalid">
+				<span ng-show="notesForm.content.$error.required">Note Content is required.</span>
 			</fieldset>
 		</div>
+
+		<div class="panel-footer">
+		<input type="submit" value="{{submitting ? 'saving....' : 'save'}}" class="btn btn-default" ng-click="saveNote(note)" ng-disabled="submitting 
+		|| notesForm.title.$dirty && notesForm.title.$invalid 
+		|| notesForm.description.$dirty && notesForm.description.$invalid 
+		|| notesForm.content.$dirty && notesForm.content.$invalid 
+		">
+		</div>
+
 	</form>
