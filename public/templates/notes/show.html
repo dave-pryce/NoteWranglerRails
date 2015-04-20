@@ -1,13 +1,17 @@
 <div class="panel panel-info">
 	<div class="panel-heading">
-		<h2><strong>{{note.title}}</strong> ( by: {{note.user_id}} {{user.name}} )</h2> 
+		<!-- user model updated to include category and user as part of note JSON -->
+		<h2><strong>{{note.title}}</strong> ( by: {{note.user.name}} )</h2> 
+
 	</div>
 
 	<div class="panel-body">
 		<h4> </h4>
 		<h3>{{note.description}}</h3><br>
 		<p>{{note.content}} </p>
-		<h3><span class="label label-info">{{note.category_id}} {{category.category}}</span></h3>
+
+		<h3><span class="label label-info">{{note.category.category}}</span></h3>
+
 	</div>
 
 	<div class="panel-footer">

@@ -17,7 +17,7 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
     respond_to do |format|
       format.html 
-      format.json { render json: @note }
+      format.json { render json: @note}
     end
   end
 
