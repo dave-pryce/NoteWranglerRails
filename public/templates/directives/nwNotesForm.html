@@ -12,7 +12,6 @@
 			<fieldset class="form-group">
 				<label for="description">Description</label>
 				<input class="form-control" type="text" id="description" name ="description" ng-model="note.description" required>
-				
 				<!-- Basic validation -->
 				<span ng-show="notesForm.description.$dirty && notesForm.description.$invalid">
 				<span ng-show="notesForm.description.$error.required">Description is required.</span>
@@ -21,13 +20,17 @@
 			<fieldset class="form-group">
 				<label for="category">Category</label>
 				<!-- note from service category_id field in json -->
-				<select ng-options="category.id as category.category for category in categories" ng-model="note.category_id" required></select>
+				<select name="category" ng-options="category.id as category.category for category in categories" ng-model="note.category_id" required></select>
+				<!-- Basic validation -->
+				<span ng-show="notesForm.category.$dirty">
+				<span ng-show="notesForm.category.$error.required">Category is required.</span>
 			</fieldset>
 
 			<fieldset class="form-group">
 				<label for="User">User</label>
 				<!-- user from service user_id field in json -->
-				<select ng-options="user.id as user.name for user in users" ng-model="note.user_id" required ></select>
+				<select name="user" ng-options="user.id as user.name for user in users" ng-model="note.user_id" required ></select>
+				<span ng-show="notesForm.user.$error.required">User is required.</span>
 			</fieldset>
 
 			<fieldset class="form-group">
