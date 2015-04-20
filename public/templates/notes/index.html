@@ -13,11 +13,11 @@
 
 		<div class="panel panel-info">
 				<div class="panel-heading">
-				<h2 ><a title="{{user.name}}" class="panel-heading" ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
+				<h2 ><a title="{{note.user.name}}" class="panel-heading" ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
 				</div>
 			<div class="panel-body">
 				<p>{{note.content}}</p>
-				<h4><span class="label label-info">{{category.category}}</span></h4>
+				<h4><span class="label label-info">{{note.category.category}}</span></h4>
 			</div>
 		</div>
 	</div>

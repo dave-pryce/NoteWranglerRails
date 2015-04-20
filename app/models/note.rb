@@ -4,8 +4,7 @@ class Note < ActiveRecord::Base
 
 	# include user and categry as part of JSON
 	def as_json(options={})
-    super(:include => [:user])
-    super(:include => [:category])
-  	end
+    super(:include => [:user,:category])
+   	end
 
 end
