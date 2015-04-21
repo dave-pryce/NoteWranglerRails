@@ -3,6 +3,6 @@ angular.module('NoteWrangler').controller('UsersIndexController', function(User,
 
 // links into user factory
  $scope.users = User.query();
-
+ $scope.searchuser = {};
 
 });
