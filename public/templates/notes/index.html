@@ -1,10 +1,14 @@
 <h1>Notes <a class="btn btn-success" href="#/notes/new">New Note</a></h1>
 
-<div class="well">
-		Search:  <input type='text' ng-model="search.input.$">
-		Filter: <nw-category-selector ng-model="search.category">  </nw-category-selector>
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<strong>Filter by Category: </strong> <nw-category-selector ng-model="search.category">  </nw-category-selector>
+	</div>
+			
+	<div class="panel-body">
+		<strong>Search: </strong><input type='text' ng-model="search.input.$">
+	</div>
 </div>
-
 
 
 
