@@ -39,9 +39,12 @@
 		<!-- CONTENT text area -->
 			<fieldset class="form-group" ng-class="{ 'has-error' : notesForm.content.$invalid && notesForm.content.$touched }">
 				<label for="content">Note Content</label>
-				<textarea class="form-control" rows="5" type="text" id="content" name ="content" ng-model="note.content" required> </textarea>
+				<textarea maxlength="250" class="form-control" rows="4" type="text" id="content" name ="content" ng-model="note.content" required> </textarea>
+				<!--Character counter-->
+				<span class="text-muted pull-right">{{250 - note.content.length}} remaining</span>
 				<!-- Basic validation -->
 				<span ng-show="notesForm.content.$touched && notesForm.content.$invalid" class="help-block">Note Content is required.</span>
+				
 			</fieldset>
 		</div>
 
