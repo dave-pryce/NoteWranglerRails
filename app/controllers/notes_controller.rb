@@ -1,30 +1,23 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
-  # GET /notes
-  # GET /notes.json
   def index
-    @notes = Note.all
     respond_to do |format|
       format.html 
-      format.json { render json: @notes}
+      format.json { render json: Note.all}
     end
   end
 
-  # GET /notes/1
-  # GET /notes/1.json
   def show
-    @note = Note.find(params[:id])
     respond_to do |format|
       format.html 
-      format.json { render json: @note}
+      format.json { render json: Note.find(params[:id])}
     end
   end
 
   # GET /notes/new
   def new
     @note = Note.new
-    
   end
 
   # GET /notes/1/edit

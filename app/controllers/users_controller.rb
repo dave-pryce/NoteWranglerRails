@@ -1,20 +1,18 @@
 class UsersController < ApplicationController
 
-  def index
-  	  @users = User.all
-  	  respond_to do |format|
-      format.html 
-      format.json { render json: @users }
+    def index
+    	  respond_to do |format|
+        format.html 
+        format.json { render json: User.all }
+      end
     end
-  end
 
 
- def show
-    @user = User.find(params[:id])
-    respond_to do |format|
-      format.html 
-      format.json { render json: @user }
+   def show
+      respond_to do |format|
+        format.html 
+        format.json { render json: User.find(params[:id]) }
+      end
     end
-  end
 
 end
