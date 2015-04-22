@@ -1,12 +1,12 @@
 <div class="panel panel-primary">
 <div class="panel-body">	
-<strong>Search Users: </strong><input type='text' ng-model="searchuser.input.$">
+<strong>Search Users: </strong><input type='text' ng-model="search.input.$">
 </div>
 </div>
 
 
 <div class="row">
-	<div class="col-sm-6" ng-repeat="user in users">
+	<div class="col-sm-6" ng-repeat="user in users | filter:search.input">
 		<div class="panel panel-info">
 			<div class="panel-heading">
 				<h2><a ng-href="#/users/{{user.id}}">{{user.name}}</a></h2>
