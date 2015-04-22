@@ -4,7 +4,9 @@
 		<!-- TITLE text field -->
 			<fieldset class="form-group" ng-class="{ 'has-error' : notesForm.title.$invalid && notesForm.title.$touched }">
 				<label for="title">Title</label>
-				<input class="form-control" type="text" id="title" name ="title" ng-model="note.title" required>
+				<input class="form-control" maxlength="50" type="text" id="title" name ="title" ng-model="note.title" required>
+				<!--Character counter-->
+				<span class="text-muted pull-right">{{50 - note.title.length}} remaining</span>
 				<!-- Basic validation $touched from angular version 1.3 -->
 				<span ng-show="notesForm.title.$invalid && notesForm.title.$touched" class="help-block">Title is required.</span>
 
@@ -15,6 +17,9 @@
 			<fieldset class="form-group" ng-class="{ 'has-error' : notesForm.description.$invalid && notesForm.description.$touched }">
 				<label for="description">Description</label>
 				<input class="form-control" type="text" id="description" name ="description" ng-model="note.description" required>
+				<!--Character counter-->
+				<span class="text-muted pull-right">{{100 - note.description.length}} remaining</span>
+				<!-- Basic validation $touched from angular version 1.3 -->
 				<!-- Basic validation -->
 				<span ng-show="notesForm.description.$invalid && notesForm.description.$touched" class="help-block">Description is required.</span>
 			</fieldset>
@@ -39,9 +44,9 @@
 		<!-- CONTENT text area -->
 			<fieldset class="form-group" ng-class="{ 'has-error' : notesForm.content.$invalid && notesForm.content.$touched }">
 				<label for="content">Note Content</label>
-				<textarea maxlength="250" class="form-control" rows="4" type="text" id="content" name ="content" ng-model="note.content" required> </textarea>
+				<textarea maxlength="500" class="form-control" rows="4" type="text" id="content" name ="content" ng-model="note.content" required> </textarea>
 				<!--Character counter-->
-				<span class="text-muted pull-right">{{250 - note.content.length}} remaining</span>
+				<span class="text-muted pull-right">{{500 - note.content.length}} remaining</span>
 				<!-- Basic validation -->
 				<span ng-show="notesForm.content.$touched && notesForm.content.$invalid" class="help-block">Note Content is required.</span>
 				
