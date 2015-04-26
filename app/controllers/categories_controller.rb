@@ -1,9 +1,10 @@
 class CategoriesController < ApplicationController
+  before_action :set_category, only: [:show, :update, :destroy]
 
   def index
   	respond_to do |format|
   		format.html
-    	fromat.json {render json: Category.all}
+    	format.json {render json: Category.all}
     end
   end
 
@@ -48,16 +49,16 @@ class CategoriesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_note
+    def set_category
       @category = Category.find(params[:id])
     end
 
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def note_params
+    def category_params
       params.require(:category).permit(:category, :description)
     end
-end
+
 
 
 end
