@@ -42,4 +42,12 @@ angular.module('NoteWrangler').config(function($routeProvider){
 			controller: "UsersShowController"
 	})
 
+
+	// categories
+	.when('/categories', {
+		templateUrl : "templates/categories/index.html",
+		controller: "CategoriesIndexController"
+	})
+
+
 });
