@@ -1,20 +1,21 @@
 <div class="panel panel-info">
 			<div class="panel-heading">
-				<h2><a ng-href="#/users/{{user.id}}">{{user.name}}</a></h2>
-			</div>
-	
-			<div class="panel-body">
+				<h2>{{user.name}}</h2>
 				<div class="img-thumbnail">
 				<gravatar email="user.email"></gravatar>
 				</div>
+			</div>
+	
+			<div class="panel-body">
+				
 					<div class="">
 					{{user.bio}}
 					</div>
 				</div>
 
 			<div class="panel-footer">
-				<p>{{user.email}}</p>
-				<p>{{user.site}}</p>	
+			<span class="glyphicon glyphicon-envelope">  </span><span>{{user.email}}</span>
+			<span class="glyphicon glyphicon-globe"></span><span>{{user.site}}</span>
 			</div>
 
 </div>

@@ -1,5 +1,3 @@
-<h1>Notes <a class="btn btn-success" href="#/notes/new">Add a New Note</a></h1>
-
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<strong>Filter by Category: </strong> <nw-category-selector ng-model="search.category">  </nw-category-selector>
@@ -11,6 +9,7 @@
 </div>
 
 
+<h1><a class="btn btn-success" href="#/notes/new">Add a New Note</a></h1>
 
 <div class="row">
 	<div class="col-sm-6 col-lg-4" ng-repeat="note in  notes | categoryFilter:search.category | filter:search.input">		
