@@ -49,6 +49,13 @@ angular.module('NoteWrangler').config(function($routeProvider){
 		controller: "CategoriesIndexController"
 	})
 
+
+	.when('/categories/new',{
+		templateUrl : "templates/categories/new.html",
+		controller: "CategoriesCreateController"
+	})
+
+
 	.when('/categories/:id/edit',{
 		templateUrl : "templates/categories/edit.html",
 		controller: "CategoriesEditController"
