@@ -18,12 +18,9 @@ a {
 }
 
 a:hover {
-	font-style: normal;
+	text-decoration: none;
 }
 
-
-
-.navbar-brand:hover { 
-	color : white;
-	font-style: normal;
+a:visited {
+	text-decoration: none;
 }
