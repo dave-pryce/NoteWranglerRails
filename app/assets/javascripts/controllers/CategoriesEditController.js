@@ -6,7 +6,7 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 		$scope.submitting = true;
 		category.$update().finally(function(){
 			$scope.submitting = false;
-			//$location.path("/categories/")
+			$location.path("categories")
 		});
 	}
 

@@ -28,7 +28,7 @@
 			<fieldset class="form-group" ng-class="{ 'has-error' : notesForm.category.$invalid && notesForm.category.$touched }">
 				<label for="category">Category</label>
 				<!-- note from service category_id field in json -->
-				<select name="category" ng-options="category.id as category.category for category in categories" ng-model="note.category_id" required></select>
+				<select name="category" ng-options="category.id as category.name for category in categories" ng-model="note.category_id" required></select>
 				<!-- Basic validation -->
 				<span ng-show="notesForm.category.$invalid && notesForm.category.$touched" class="help-block">Category is required.</span>
 			</fieldset>

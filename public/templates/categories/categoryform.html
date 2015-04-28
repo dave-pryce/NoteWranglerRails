@@ -1,0 +1,30 @@
+<form name = "categoryForm" novalidate>
+		<div class="panel-body">
+			
+		<!-- CATEGORY text field -->
+			<fieldset class="form-group" ng-class="{ 'has-error' : categoryForm.category.$invalid && categoryForm.category.$touched }">
+				<label for="category">Category</label>
+				<input max-length="20" class="form-control" type="text" id="category" name ="category" ng-model="category.name" required>
+				<!--Character counter-->
+				<span class="text-muted pull-right"><small>{{20 - category.category.length}}</small></span>
+				<span ng-show="categoryForm.category.$invalid && categoryForm.category.$touched" class="help-block">category is required.</span>
+			</fieldset>
+
+		<!-- Description text area -->
+			<fieldset class="form-group" ng-class="{ 'has-error' : categoryForm.description.$invalid && categoryForm.description.$touched }">
+				<label for="description">Category Description</label>
+				<textarea maxlength="150" class="form-control" rows="4" type="text" id="description" name ="description" ng-model="category.description" required> </textarea>
+				<!--Character counter-->
+				<span class="text-muted pull-right"><small>{{150 - category.description.length}}</small></span>
+				<!-- Basic validation -->
+				<span ng-show="categoryForm.description.$touched && categoryForm.description.$invalid" class="help-block">Category Description is required.</span>
+				
+			</fieldset>
+		</div>
+
+		<div class="panel-footer">
+		<!-- disable submit if saving or required fields not complete -->
+		<input type="submit" value="{{submitting ? 'saving....' : 'save'}}" class="btn btn-default" ng-click="saveCategory(category)" ng-disabled="submitting 
+		|| categoryForm.category.$invalid 
+		|| categoryForm.description.$invalid">
+		</div>
