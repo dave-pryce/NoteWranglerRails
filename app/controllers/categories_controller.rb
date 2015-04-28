@@ -20,7 +20,7 @@ class CategoriesController < ApplicationController
   	@category = Category.new(category_params)
 
   	respond_to do |format|
-  		if @note.save
+  		if @category.save
   			format.json { render json: @category}
   		else
   			format.json { render json: @category.errors, status: :unprocessable_entry}
@@ -31,10 +31,10 @@ class CategoriesController < ApplicationController
 
   def update
     respond_to do |format|
-      if @category.update(note_params)
+      if @category.update(category_params)
         format.json { render json: @category }
       else
-        format.json { render json: @note.category, status: :unprocessable_entity }
+        format.json { render json: @category.errors, status: :unprocessable_entity }
       end
     end
   end

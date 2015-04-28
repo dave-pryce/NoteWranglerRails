@@ -9,7 +9,7 @@
 }
 
 body {
-	background-color: #f5f5f5;
+	background-color: #3D3D3D;
 }
 
 
@@ -18,5 +18,12 @@ a {
 }
 
 a:hover {
+	font-style: normal;
+}
+
+
+
+.navbar-brand:hover { 
+	color : white;
 	font-style: normal;
 }
