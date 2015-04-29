@@ -1,8 +1,17 @@
-<div class="panel panel-primary">
+<div ng-hide="showUndo" class="panel panel-primary">
 		<div class="panel-heading">
 			<h1>Edit: {{category.name}}</h1>
+			<a ng-href="" ng-click="flagToDelete(category)" class="btn btn-danger">Delete Category</a>	
 		</div>
 
 		<div ng-include src="'templates/categories/categoryform.html'"></div>
-	
+
 </div>
+
+<div class="alert alert-warning" role="alert" ng-show="showUndo"><strong>{{category.name}}</strong> Deleted
+<a class="btn btn-link" ng-click="undoDelete()">Undo</a>
+<a class="btn btn-link" ng-click="deleteCategory(category)">Close</a>
+
+</div>
+
+	
