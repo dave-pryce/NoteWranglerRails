@@ -19,11 +19,13 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 		$scope.showUndo = true;
 
 
-	// time out delete
-	$timeout function(category.$remove().then(function(){
+		//time out delete----------------------
+		$timeout(function(){
+				category.$remove().then(function(){
 				$location.path("/categories/")
-	})
-	,3000);
+				});
+				}, 6000);
+		//------------------------------------
 
 	}
 
