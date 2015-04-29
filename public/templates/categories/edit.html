@@ -8,9 +8,11 @@
 
 </div>
 
-<div class="alert alert-warning" role="alert" ng-show="showUndo"><strong>{{category.name}}</strong> Deleted
+
+<div class="alert alert-warning" role="alert" ng-show="showUndo">
+<strong>{{category.name}} Deleted</strong>
 <a class="btn btn-link" ng-click="undoDelete()">Undo</a>
-<a class="btn btn-link" ng-click="deleteCategory(category)">Close</a>
+<button type="button" class="close" data-dismiss="alert" ng-click="deleteCategory(category)"aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
 </div>
 

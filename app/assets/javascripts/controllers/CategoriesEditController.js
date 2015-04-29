@@ -1,4 +1,4 @@
-angular.module("NoteWrangler").controller("CategoriesEditController", function(Category, $scope, $routeParams, $location){
+angular.module("NoteWrangler").controller("CategoriesEditController", function(Category, $scope, $routeParams, $location, $timeout){
 	$scope.category = Category.get({id: $routeParams.id});
 	$scope.submitting = false;
 	$scope.showUndo = false;
@@ -15,7 +15,7 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 
 	// Mark to Delete
 	$scope.flagToDelete = function(category){
-		console.log(category.id + " is flagged for deletion")
+		//console.log(category.id + " is flagged for deletion")
 		$scope.showUndo = true;
 	}
 
@@ -25,6 +25,13 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 		$scope.showUndo = false;
 	}
 
+
+	// time out delete
+	$timeout (function(category){
+				category.$remove().then(function(){
+				$location.path("/categories/")
+	});
+	},3000);
 
 
 	// final delete
