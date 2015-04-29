@@ -17,6 +17,14 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 	$scope.flagToDelete = function(category){
 		//console.log(category.id + " is flagged for deletion")
 		$scope.showUndo = true;
+
+
+	// time out delete
+	$timeout function(category.$remove().then(function(){
+				$location.path("/categories/")
+	})
+	,3000);
+
 	}
 
 
@@ -26,12 +34,6 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 	}
 
 
-	// time out delete
-	$timeout (function(category){
-				category.$remove().then(function(){
-				$location.path("/categories/")
-	});
-	},3000);
 
 
 	// final delete
