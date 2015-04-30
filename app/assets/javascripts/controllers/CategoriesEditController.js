@@ -2,7 +2,7 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 	$scope.category = Category.get({id: $routeParams.id});
 	$scope.submitting = false;
 	$scope.showUndo = false;
-
+	var timeout;
 
 	// Save categroy
 	$scope.saveCategory = function(category){
@@ -13,14 +13,14 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 		});
 	}
 
-	// Mark to Delete
+	// Flag to Delete
 	$scope.flagToDelete = function(category){
 		//console.log(category.id + " is flagged for deletion")
 		$scope.showUndo = true;
 
 
 		//time out delete----------------------
-		$timeout(function(){
+		timeout = $timeout(function(){
 				category.$remove().then(function(){
 				$location.path("/categories/")
 				});
@@ -32,6 +32,7 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 
 	// Undo delete
 	$scope.undoDelete = function(){
+		$timeout.cancel(timeout);
 		$scope.showUndo = false;
 	}
 
@@ -40,9 +41,13 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 
 	// final delete
 	$scope.deleteCategory = function(category){
+			// Cancel timeout
+			$timeout.cancel(timeout);
+			// then delete
 				category.$remove().then(function(){
 				$location.path("/categories/")
 		});
+		
 	}
 
 });
