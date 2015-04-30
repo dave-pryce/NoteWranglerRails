@@ -14,8 +14,17 @@
 				</div>
 
 			<div class="panel-footer">
-			<span class="glyphicon glyphicon-envelope">  </span><span> {{user.email}}</span>
-			<span class="glyphicon glyphicon-globe"></span><span> {{user.site}}</span>
+			
+				<!-- only show if email icon if user.email exists -->
+				<div ng-show="user.email">
+				<span class="glyphicon glyphicon-envelope"></span><span> {{user.email}}</span>
+				</div>
+
+				<div ng-show="user.site">
+				<span class="glyphicon glyphicon-globe"></span><span> {{user.site}}</span>
+				</div>
+
+			
 			</div>
 
 </div>
