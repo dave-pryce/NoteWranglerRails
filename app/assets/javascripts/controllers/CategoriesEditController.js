@@ -45,6 +45,7 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 			// Cancel timeout
 			$timeout.cancel(timeout);
 			// then delete
+			console.log (category);
 				category.$remove().then(function(){
 				$location.path("/categories/")
 		});
