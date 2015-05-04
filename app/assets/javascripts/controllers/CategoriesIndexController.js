@@ -3,7 +3,7 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 
 		// Flag to Delete
 		$scope.flagToDelete = function(category){
-		console.log(category.id + " is flagged for deletion")
+		//console.log(category.id + " is flagged for deletion")
 		$scope.showUndo = true;
 		};
 
@@ -12,19 +12,18 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 		// Cancel timeout
 		//$timeout.cancel(timeout);
 		// then delete
-		console.log(category.id + "Deleted")
+		//console.log(category.id + "Deleted")
 		$scope.category = Category.get({id: category.id});
-			category.$remove().then(function(){
-			$location.path("/categories/")
-		});
+			category.$remove()
+		};
 
-			// Undo delete
+		// Undo delete
 		$scope.undoDelete = function(){
 		// cancel timeout
 		//$timeout.cancel(timeout);
 		$scope.showUndo = false;
-	}
+		};
 		
-	};
+
 
 	});
