@@ -1,10 +1,17 @@
 angular.module('NoteWrangler').controller('CategoriesIndexController', function(Category, $scope, $location){
 	$scope.categories = Category.query();
+	// category flagged for deletion
+	$scope.categoryDelete = [];
+	console.log($scope.categories);
+
 
 		// Flag to Delete
 		$scope.flagToDelete = function(category){
-		//console.log(category.id + " is flagged for deletion")
-		$scope.showUndo = true;
+		console.log(category.id + " is flagged for deletion")
+		//$scope.categoryDelete.push(angular.toJson(category));
+		$scope.categoryDelete.push(category);
+		console.log($scope.categoryDelete);
+		//$scope.showUndo = true;
 		};
 
 		// final delete
@@ -14,7 +21,9 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 		// then delete
 		//console.log(category.id + "Deleted")
 		$scope.category = Category.get({id: category.id});
-			category.$remove()
+			category.$remove().then(function(){
+				$location.path("/categories/")
+		});
 		};
 
 		// Undo delete
@@ -24,6 +33,4 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 		$scope.showUndo = false;
 		};
 		
-
-
 	});
