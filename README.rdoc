@@ -1,28 +1,10 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+App built following Codeschool's - Soup to Bits: Staying Sharp with Angular.js
+https://www.codeschool.com/screencasts/soup-to-bits-staying-sharp-with-angular-js
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+App is built on a Rails back end.
+Has been extended to include some additoinal front end features.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
