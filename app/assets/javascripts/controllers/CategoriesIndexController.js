@@ -1,23 +1,13 @@
 angular.module('NoteWrangler').controller('CategoriesIndexController', function(Category, $scope, $location){
 	$scope.categories = Category.query();
-	// category flagged for deletion
-	$scope.categoryDelete = [];
-	//console.log($scope.categories);
-
 
 		// Flag to Delete
 		$scope.flagToDelete = function(category){
-		console.log(category.id + " is flagged for deletion")
-		//$scope.categoryDelete.push(angular.toJson(category));
-		$scope.categoryDelete.push(category);
+		//console.log(category.id + " is flagged for deletion")
+		// add flagged to delete property to category
+		category['flaggedToDelete'] = true;
+		//console.log($scope.categories)
 
-		// find position of undo category in array
-		var index = $scope.categories.indexOf(category);
-		console.log(index);
-		// remove category from array 1 = move 1
-		$scope.categories.push(index,1,'flaggedToDelete');
-		console.log($scope.categories);
-		//$scope.showUndo = true;
 		};
 
 		// final delete
@@ -34,16 +24,10 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 
 		// Undo delete
 		$scope.undoDelete = function(category){
+		// remove flagged to delete property
+		delete category.flaggedToDelete;
 		// cancel timeout
 		//$timeout.cancel(timeout);
-		// find position of undo category in array
-		var indexD = $scope.categoryDelete.indexOf(category);
-		var index = $scope.categories.indexOf(category);
-		//console.log(index);
-		// remove (splice) category from array 1 = move 1
-		$scope.categoryDelete.splice(indexD,1)
-		// add undo category back to categories
-		$scope.categories.push(category)
 		};
 		
 	});
