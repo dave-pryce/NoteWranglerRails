@@ -2,7 +2,7 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 	$scope.categories = Category.query();
 	// category flagged for deletion
 	$scope.categoryDelete = [];
-	console.log($scope.categories);
+	//console.log($scope.categories);
 
 
 		// Flag to Delete
@@ -13,10 +13,10 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 
 		// find position of undo category in array
 		var index = $scope.categories.indexOf(category);
-		//console.log(index);
+		console.log(index);
 		// remove category from array 1 = move 1
-		$scope.categories.splice(index,1)
-		//console.log($scope.categoryDelete);
+		$scope.categories.push(index,1,'flaggedToDelete');
+		console.log($scope.categories);
 		//$scope.showUndo = true;
 		};
 
