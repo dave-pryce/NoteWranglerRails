@@ -2,7 +2,6 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 	$scope.category = Category.get({id: $routeParams.id});
 	$scope.submitting = false;
 	$scope.showUndo = false;
-	var timeout;
 
 	// Save categroy
 	$scope.saveCategory = function(category){
