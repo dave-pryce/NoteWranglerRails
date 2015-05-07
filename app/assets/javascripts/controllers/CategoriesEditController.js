@@ -28,16 +28,12 @@ angular.module("NoteWrangler").controller("CategoriesEditController", function(C
 
 	}
 
-
 	// Undo delete
 	$scope.undoDelete = function(){
 	// cancel timeout
 		$timeout.cancel(timeout);
 		$scope.showUndo = false;
 	}
-
-
-
 
 	// final delete
 	$scope.deleteCategory = function(category){

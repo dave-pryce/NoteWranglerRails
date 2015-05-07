@@ -7,13 +7,17 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 		// add flagged to delete property to category
 		category['flaggedToDelete'] = true;
 		//console.log($scope.categories)
+		var index = $scope.categories.indexOf(category);
+		console.log(index);
+		
 
 		//time out delete----------------------
 		timeout = $timeout(function(){
 				category.$remove().then(function(){
-				$location.path("/categories/")
+				$scope.categories.splice(index,1)
+				console.log($scope.categories)
 				});
-				}, 3000);
+				}, 6000);
 		//-
 
 		};
