@@ -3,7 +3,7 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 
 		// Flag to Delete
 		$scope.flagToDelete = function(category){
-		//console.log(category.id + " is flagged for deletion")
+		console.log(category.id + " is flagged for deletion")
 		// add flagged to delete property to category
 		category['flaggedToDelete'] = true;
 		//console.log($scope.categories)
@@ -15,7 +15,8 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 		//time out delete----------------------
 		// define unique reference for the time out for this category
 		     $scope.cTimeOut = toString(category.id + category.name);
-		     console.log($scope.cTimeOut);
+		     var timeout = category.id;
+		     console.log(timeout + " Is waiting for timeout");
 		     $scope.cTimeOut = $timeout(function(){
 				category.$remove().then(function(){
 				$scope.categories.splice($scope.categories.indexOf(category),1)
@@ -41,6 +42,8 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 		$scope.undoDelete = function(category){
 		// remove flagged to delete property from category
 		delete category.flaggedToDelete;
+		console.log(category.id + " flagged to delete property removed")
+		console.log($scope.cTimeOut + " Time out cancelled")
 		//console.log($scope.categories);
 		// cancel timeout
 		$timeout.cancel($scope.cTimeOut);
