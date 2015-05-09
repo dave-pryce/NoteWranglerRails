@@ -14,25 +14,27 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 		//console.log(categoryTimeOut)
 		//time out delete----------------------
 		// define unique reference for the time out for this category
-		     $scope.cTimeOut = toString(category.id + category.name);
-		     var timeout = category.id;
-		     console.log(timeout + " Is waiting for timeout");
-		     $scope.cTimeOut = $timeout(function(){
+		     //$scope.cTimeOut = category.id;
+		     //var timeout = category.id;
+		     //console.log($scope.cTimeOut + " Is waiting for timeout");
+		     //$scope.cTimeOut = 
+		     category.$$hashkey = $timeout(function(){
 				category.$remove().then(function(){
 				$scope.categories.splice($scope.categories.indexOf(category),1)
-				//console.log($scope.categories)
+				console.log(category.id + " Deleted by timeout");
 				});
-				}, 6000);
-
+				}, 6000); 
+		     
+		     
 
 		};
 
 		// final delete
 		$scope.deleteCategory = function(category){
 		// Cancel timeout
-		$timeout.cancel($scope.cTimeOut);
+		$timeout.cancel(category.$$hashkey);
 		// then delete
-		//console.log(category.id + "Deleted")
+		console.log(category.id + " Deleted");
 			category.$remove().then(function(){
 				$scope.categories.splice($scope.categories.indexOf(category),1)
 		});
@@ -43,10 +45,10 @@ angular.module('NoteWrangler').controller('CategoriesIndexController', function(
 		// remove flagged to delete property from category
 		delete category.flaggedToDelete;
 		console.log(category.id + " flagged to delete property removed")
-		console.log($scope.cTimeOut + " Time out cancelled")
 		//console.log($scope.categories);
 		// cancel timeout
-		$timeout.cancel($scope.cTimeOut);
+		$timeout.cancel(category.$$hashkey);
+		console.log(category.id + " Time out cancelled")
 		};
 		
 	});
