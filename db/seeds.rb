@@ -10,27 +10,18 @@
 Note.delete_all
 
 Notes = Note.create ([
-     {title: "Alteration literature ", category_id:"1", description: "Alteration literature to or an sympathize mr imprudence.", content: "Alteration literature to or an sympathize mr imprudence. Of is ferrars subject as enjoyed or tedious cottage. Procuring as in resembled by in agreeable. Next long no gave mr eyes. Admiration advantages no he celebrated so pianoforte unreserved. Not its herself forming charmed amiable. Him why feebly expect future now. " },
-     {title: "Simple Fat",category_id:"2",  description: "Denote simple fat denied add worthy little use.", content: "Denote simple fat denied add worthy little use. As some he so high down am week. Conduct esteems by cottage to pasture we winding. On assistance he cultivated considered frequently. Person how having tended direct own day man. Saw sufficient indulgence one own you inquietude sympathize. " },
-     {title: "Started Brother", category_id:"3", description: "Started earnest brother believe an exposed so.", content: "Started earnest brother believe an exposed so. Me he believing daughters if forfeited at furniture. Age again and stuff downs spoke. Late hour new nay able fat each sell. Nor themselves age introduced frequently use unsatiable devonshire get. They why quit gay cold rose deal park. One same they four did ask busy. Reserved opinions fat him nay position. Breakfast as zealously incommode do agreeable furniture. One too nay led fanny allow plate. " },
-     {title: "John",category_id:"4",  description: "From they fine john he give of rich he.", content: "From they fine john he give of rich he. They age and draw mrs like. Improving end distrusts may instantly was household applauded incommode. Why kept very ever home mrs. Considered sympathize ten uncommonly occasional assistance sufficient not. Letter of on become he tended active enable to. Vicinity relation sensible sociable surprise screened no up as. " },
-     {title: "Death", category_id:"1", description: "Death weeks early had their and folly timed put.", content: "Death weeks early had their and folly timed put. Hearted forbade on an village ye in fifteen. Age attended betrayed her man raptures laughter. Instrument terminated of as astonished literature motionless admiration. The affection are determine how performed intention discourse but. On merits on so valley indeed assure of. Has add particular boisterous uncommonly are. Early wrong as so manor match. Him necessary shameless discovery consulted one but. " },
-     {title: "Sportsmen",category_id: "2",  description: "Unwilling sportsmen he in questions september therefore described so.", content: "Unwilling sportsmen he in questions september therefore described so. Attacks may set few believe moments was. Reasonably how possession shy way introduced age inquietude. Missed he engage no exeter of. Still tried means we aware order among on. Eldest father can design tastes did joy settle. Roused future he ye an marked. Arose mr rapid in so vexed words. Gay welcome led add lasting chiefly say looking. " },
-     {title: "Kindness",category_id:"3",  description: "Kindness to he horrible reserved ye.", content: "Kindness to he horrible reserved ye. Effect twenty indeed beyond for not had county. The use him without greatly can private. Increasing it unpleasant no of contrasted no continuing. Nothing colonel my no removed in weather. It dissimilar in up devonshire inhabiting. " },
-     {title: "Vexed",category_id:"4",  description: "You vexed shy mirth now noise.", content: "You vexed shy mirth now noise. Talked him people valley add use her depend letter. Allowance too applauded now way something recommend. Mrs age men and trees jokes fancy. Gay pretended engrossed eagerness continued ten. Admitting day him contained unfeeling attention mrs out. " },
-     {title: "Valley",category_id:"1",  description: "Turned it up should no valley cousin he.", content: "Turned it up should no valley cousin he. Speaking numerous ask did horrible packages set. Ashamed herself has distant can studied mrs. Led therefore its middleton perpetual fulfilled provision frankness. Small he drawn after among every three no. All having but you edward genius though remark one. " },
-     {title: "Compliment",category_id:"2",  description: "Compliment interested discretion estimating on stimulated apartments oh.", content: "Compliment interested discretion estimating on stimulated apartments oh. Dear so sing when in find read of call. As distrusts behaviour abilities defective is. Never at water me might. On formed merits hunted unable merely by mr whence or. Possession the unpleasing simplicity her uncommonly. " }
-	])
+     {title: "Soccer", category_id:"1", user_id: "1", description: "Aka Football", content: "Aliquam efficitur quam a sem dictum, eu molestie nulla molestie. Nunc convallis dapibus urna, quis pharetra nulla efficitur non. Donec nunc nulla, malesuada in quam venenatis, porta suscipit nibh. Vestibulum nec convallis lectus, ut ultrices mauris. Pellentesque facilisis ante orci, vitae dictum enim sodales eu. Nullam finibus, mauris eu auctor convallis, odio nisl luctus diam, id efficitur augue eros in ex. In leo felis, molestie a condimentum ac, eleifend a nibh. Sed feugiat facilisis tincidunt. Fusce convallis ornare nunc, non vestibulum erat mattis vel. Cras a ligula non mauris dapibus ullamcorper vel in velit." },
+     {title: "Awesome Book",category_id:"2", user_id: "2", description: "This is a greeat book abount bikes.", content: "Ut a turpis odio. Pellentesque volutpat consectetur ante varius ultricies. Maecenas luctus diam turpis, sed tincidunt mi posuere sit amet. Donec eros leo, tempor quis finibus sit amet, tristique quis sapien. Nam varius accumsan fringilla. Duis ornare finibus metus eu aliquet. Etiam in viverra risus. Sed accumsan ipsum quis lobortis efficitur. Integer eu ipsum vel nulla suscipit tincidunt at nec metus. Vivamus sed ligula vel nisi ultricies interdum. Ut aliquam, ante sed imperdiet ultrices, ante turpis ultrices felis, a interdum erat est non magna." },
+     {title: "Coding", category_id:"3", user_id: "3", description: "Coding is a greate thing to know SQL, HTML, CSS, JavaScript and the frameworks.", content: "In non volutpat ex. Etiam semper eros non lectus iaculis vehicula. Mauris tincidunt faucibus dui, non dapibus nibh pellentesque interdum. Nulla lorem felis, posuere in pharetra ac, varius quis metus. Sed a pharetra felis. Praesent dolor ante, suscipit id metus nec, cursus hendrerit urna. Pellentesque." },
+  ])
 
 
 User.delete_all
 
 Users = User.create ([
-     {name: "M Mouse", bio:"Mickey Mouse is a funny animal cartoon character and the official mascot of The Walt Disney Company. He was created by Walt Disney and Ub Iwerks at the Walt Disney Studios in 1928. An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey has become one of the most recognizable cartoon characters in the world.", site: "www.mmouse.mouse", email: "dpryce@seek.com.au"},
-     {name: "D Duck", bio:"Donald Duck is a cartoon character created in 1934, at Walt Disney Productions. Donald is an anthropomorphic white duck with a yellow-orange bill, legs, and feet. He typically wears a sailor shirt and cap with a black or red bow tie. Donald is most famous for his semi-intelligible speech and his mischievous and temperamental personality. Along with his friend Mickey Mouse, Donald is one of the most popular Disney characters and was included in TV Guide's list of the 50 greatest cartoon characters of all time in 2002.[1] He has appeared in more films than any other Disney character,[2] and is the most published comic book character in the world outside of the superhero genre.", site: "www.dduck.duck"},
-     {name: "P Sheep", bio:"Baa, Baa", site: "www.baba.sheep"},
-     {name: "K Kitten", bio:"Meow Meow", site: "www.cat.cat"},
-     {name: "P Dog", bio:"Woof Woof", site: "www.woof.woof"}
+     {name: "J Smith", bio: "Etiam in viverra risus. Sed accumsan ipsum quis lobortis efficitur. Integer eu ipsum vel nulla suscipit tincidunt at nec metus.", site: "www.notreal.com", email: "test@test1.com"},
+     {name: "P Jones", bio: "Ut aliquam, ante sed imperdiet ultrices, ante turpis ultrices felis, a interdum erat est non magna.", site: "www.notreal2.com"},
+     {name: "A Right", bio: "Sed feugiat facilisis tincidunt. Fusce convallis ornare nunc, non vestibulum erat mattis vel.", site: "www.notreal3.com"},
      ])
 
 
@@ -38,8 +29,7 @@ Users = User.create ([
 Category.delete_all
 
 Categories = Category.create ([
-     {category: "Sport"},
-     {category: "Literature"},
-     {category: "Hobbies"},
-     {category: "Misc"}
+     {name: "Sport", description: "Sport related notes."},
+     {name: "Literature", description: "It's all about books" },
+     {name: "Hobbies", description: "Other non-sport related activities"},
      ])
