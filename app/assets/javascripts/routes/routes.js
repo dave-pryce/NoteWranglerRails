@@ -62,4 +62,11 @@ angular.module('NoteWrangler').config(function($routeProvider){
 	})
 
 
+	// github issues / features
+		.when('/features',{
+		templateUrl : "templates/features/index.html",
+		controller: "FeatureindexController"
+	})
+
+
 });
