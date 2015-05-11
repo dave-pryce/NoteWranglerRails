@@ -1,5 +1,13 @@
-<h1> List of features from GitHub Repo</h1>
+<h1 class="well"> List of features from GitHub Repo</h1>
 
-<div class="col-sm-6 col-lg-4" ng-repeat="issue in  issues">
-	{{issue.title}}
+<div class="col-sm-4 col-lg-2" ng-repeat="issue in  issues">
+
+	<div class="panel panel-default">
+		<div class="panel panel-heading">
+		{{issue.title}}
+		</div>
+		<div class="panel panel-body">
+		{{issue.labels.name}}
+		</div>
+	</div>
 </div>
