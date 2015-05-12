@@ -3,7 +3,7 @@
 
 <div class="row">
 
-	<div class="col-sm-6 col-lg-4" ng-repeat="category in  categories">
+	<div ng-repeat="category in  categories">
 		<!-- show primary style if not flagged - show warning style if flagged -->
 		<div ng-class="category.flaggedToDelete ? 'panel panel-warning' : 'panel panel-primary'">
 				<div class="panel-heading">

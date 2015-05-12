@@ -4,7 +4,7 @@ angular.module('NoteWrangler').controller('FeatureindexController', function(Fea
 // get all data from githubIssue factory
  $scope.issues = Feature.query();
  $scope.flabel = [];
-angular.forEach($scope.issues, function(value,key){
- 	this.push(key + ':' + value);
-}, $scope.flabel);
+angular.forEach($scope.issues.flabel, function(value,key){
+	$scope.flabel.push(value);
+});
 });

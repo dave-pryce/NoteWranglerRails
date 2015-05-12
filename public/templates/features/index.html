@@ -1,5 +1,5 @@
 <div class="well">
-	<h1> List of features from GitHub Repo</h1>
+	<h1> List of features from <a href="https://github.com/dave-pryce/NoteWranglerRails">GitHub</a> Repo</h1>
 	<!-- to do filter based on label -->
 	<button>StbFeature</button>
 	<button>DPFetaure</button>
@@ -15,8 +15,8 @@
 		<div class="panel-heading">
 		<strong>{{issue.number}}</strong>. {{issue.title}}
 		</div>
-		<div ng-repeat="label in labels">
-		{{label.name}}
+		<div>
+		{{issue.labels}}
 		</div>
 		<div class="panel-footer">
 		Status: {{issue.state}}
