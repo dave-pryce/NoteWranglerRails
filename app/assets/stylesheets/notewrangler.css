@@ -14,11 +14,12 @@ body {
 
 
 a {
-	color : white;
+	color : gray;
 }
 
 a:hover {
 	text-decoration: none;
+	color : black;
 }
 
 a:visited {

@@ -68,5 +68,10 @@ angular.module('NoteWrangler').config(function($routeProvider){
 		controller: "FeatureindexController"
 	})
 
+    // about
+    	.when('/about',{
+		templateUrl : "templates/about.html",
+		controller: "AboutController"
+	})
 
 });
