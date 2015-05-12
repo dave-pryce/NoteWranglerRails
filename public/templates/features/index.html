@@ -1,18 +1,25 @@
 <div class="well">
-<h1> List of features from GitHub Repo</h1>
+	<h1> List of features from GitHub Repo</h1>
+	<!-- to do filter based on label -->
+	<button>StbFeature</button>
+	<button>DPFetaure</button>
 </div>
+
+
+
+
 
 <div class="col-sm-4 col-lg-2" ng-repeat="issue in  issues">
 
-	<div class="panel panel-default">
+	<div class="panel panel-success">
 		<div class="panel-heading">
-		{{issue.number}}. {{issue.title}}
+		<strong>{{issue.number}}</strong>. {{issue.title}}
 		</div>
-		<div>
-		{{issue.label.name}}
+		<div ng-repeat="label in labels">
+		{{label.name}}
 		</div>
 		<div class="panel-footer">
-		{{issue.state}}
+		Status: {{issue.state}}
 		</div>
 	</div>
 </div>

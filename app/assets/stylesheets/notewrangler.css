@@ -12,6 +12,12 @@ body {
 	background-color: #3D3D3D;
 }
 
+.container-fluid {
+	max-width: 90%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
 
 a {
 	color : black;
@@ -25,3 +31,11 @@ a:hover {
 a:visited {
 	text-decoration: none;
 }
+
+
+.footertext {
+	color : gray;
+	padding-top: 10px;
+}
+
+
