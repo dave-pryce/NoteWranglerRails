@@ -3,11 +3,14 @@
 <div class="col-sm-4 col-lg-2" ng-repeat="issue in  issues">
 
 	<div class="panel panel-default">
-		<div class="panel panel-heading">
-		{{issue.title}}
+		<div class="panel-heading">
+		{{issue.number}}. {{issue.title}}
 		</div>
-		<div class="panel panel-body">
-		{{issue.labels.name}}
+		<!--div class="panel-body" ng-repeat="label in issue">
+		{{label.name}}
+		</div-->
+		<div class="panel-footer">
+		{{issue.state}}
 		</div>
 	</div>
 </div>
