@@ -1,23 +1,26 @@
-<div class="well">
+<div class="panel panel-default">
+	<div class="panel-heading">
 	<h1> List of NoteWrangler App features from <a href="https://github.com/dave-pryce/NoteWranglerRails">GitHub</a> Repo</h1>
+	</div>
+
+	<div class="panel-body">
 	<!-- to do filter based on label -->
-	<button class="btn btn-default">StbFeature</button>
-	<button class="btn btn-default">DPFetaure</button>
+	<span class="glyphicon glyphicon-tag"></span> Filter by Label:
+	<button class="btn btn-default">STB Feature</button>
+	<button class="btn btn-default">DP Fetaure</button>
+	</div>
 </div>
 
 
 <div class="col-sm-4 col-lg-2" ng-repeat="issue in issues">
-
 	<div class="panel panel-primary">
 		<div class="panel-heading">
 		<strong>{{issue.number}}</strong>. {{issue.title}}
 		</div>
-		<div class="panel-body" ng-repeat="label in issue.labels">
-		{{label.name}}
-		</div>
-
 		<div class="panel-footer">
-		Status: {{issue.state}}
+		<div ng-repeat="label in issue.labels">
+		<span class="glyphicon glyphicon-tag"></span> {{label.name}}
+		</div>
 		</div>
 	</div>
 </div>
