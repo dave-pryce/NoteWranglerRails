@@ -1,20 +1,18 @@
 <div class="well">
 	<h1> List of NoteWrangler App features from <a href="https://github.com/dave-pryce/NoteWranglerRails">GitHub</a> Repo</h1>
 	<!-- to do filter based on label -->
-	<button>StbFeature</button>
-	<button>DPFetaure</button>
+	<button class="btn btn-default">StbFeature</button>
+	<button class="btn btn-default">DPFetaure</button>
 </div>
 
 
 <div class="col-sm-4 col-lg-2" ng-repeat="issue in issues">
 
-	<div class="panel panel-success">
+	<div class="panel panel-primary">
 		<div class="panel-heading">
 		<strong>{{issue.number}}</strong>. {{issue.title}}
 		</div>
-		{{issue.labels}}
-
-		<div class="panel-body" ng-repeat="label in labels">
+		<div class="panel-body" ng-repeat="label in issue.labels">
 		{{label.name}}
 		</div>
 
