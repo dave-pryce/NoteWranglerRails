@@ -3,13 +3,14 @@ angular.module('NoteWrangler').controller('FeatureindexController', function(Fea
 
 // get all data from githubIssue factory
  $scope.issues = Feature.query();
- $scope.ulabels = []
+ $scope.labels = [];
+ //console.log(Feature.query());
 
- console.log($scope.issues);
-	angular.forEach($scope.issues, function(value, key){
-	//$scope.ulabels.push( key + ':' + value);
-	$scope.ulabels.push('XXXXX');
-});
+	angular.forEach($scope.issues, function(issue, index){
+		angular.forEach(this.labels, function(label,index){
+	$scope.labels.push(label.name);
+   });
+  });
 
-console.log($scope.ulabels);
+console.log($scope.labels);
 });

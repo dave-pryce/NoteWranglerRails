@@ -6,17 +6,23 @@
 </div>
 
 
-<div class="col-sm-4 col-lg-2" ng-repeat="issue in  issues">
+<div class="col-sm-4 col-lg-2" ng-repeat="issue in issues">
 
 	<div class="panel panel-success">
 		<div class="panel-heading">
 		<strong>{{issue.number}}</strong>. {{issue.title}}
 		</div>
-		<div>
 		{{issue.labels}}
+
+		<div class="panel-body" ng-repeat="label in labels">
+		{{label.name}}
 		</div>
+
 		<div class="panel-footer">
 		Status: {{issue.state}}
 		</div>
 	</div>
 </div>
+
+
+
