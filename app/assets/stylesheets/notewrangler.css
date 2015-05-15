@@ -57,6 +57,7 @@ a:visited {
 .spinner {
 	color: white;
 	font-size: 16px;
+  text-align: center;
 }
 
 .spinner > div {
