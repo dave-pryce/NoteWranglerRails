@@ -34,9 +34,12 @@
 		</div>
 		
 		<div ng-repeat="label in issue.labels">
-		<div class="panel-footer">
+		<!--div class="panel-footer"-->
+
+		<div ng-class="isDP(label) ? 'panel-footer dp' : 'panel-footer'">
+
 		<span class="glyphicon glyphicon-tag"></span> {{label.name}}
-		<div ng-if="isDP(label)">this is dp </div>
+		<!--div ng-if="isDP(label)"></div-->
 		</div>
 		</div>
 	</div>

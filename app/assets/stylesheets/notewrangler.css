@@ -105,3 +105,9 @@ a:visited {
     -webkit-transform: scaleY(1.0);
   }
 }
+
+
+.panel-footer.dp
+{
+  background-color: red;
+}

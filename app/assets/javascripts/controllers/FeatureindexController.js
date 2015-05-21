@@ -6,7 +6,7 @@ $scope.issues = Feature.query();
 $scope.search = {};
 
 $scope.isDP = function(label){
-	console.log(label);
+	//console.log(label);
 	if (label.name == "DP") {
 	return true
 	};
