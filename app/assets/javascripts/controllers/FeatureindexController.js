@@ -5,4 +5,11 @@ $scope.issues = Feature.query();
 //console.log($scope.issues);
 $scope.search = {};
 
+$scope.isDP = function(label){
+	console.log(label);
+	if (label.name == "DP") {
+	return true
+	};
+};
+
 });

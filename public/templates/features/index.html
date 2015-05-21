@@ -36,7 +36,7 @@
 		<div ng-repeat="label in issue.labels">
 		<div class="panel-footer">
 		<span class="glyphicon glyphicon-tag"></span> {{label.name}}
-		<!--div ng-if="label.name = 'DP'">this is dp </div-->
+		<div ng-if="isDP(label)">this is dp </div>
 		</div>
 		</div>
 	</div>
