@@ -7,26 +7,19 @@ angular.module('NoteWrangler').controller('FeatureindexController', function(Fea
 
 	$scope.isDP = function(label){
 		//console.log(label);
-		if (label.name == "DP") {
-		return true
-		};
+		if (label.name == "DP") {return true};
 	};
 
-	$scope.labelValue = function (){
-	angular.forEach($scope.issues, function(value,key)
-		{
-		// console.log(value.labels);
-		// return value.labels;
-
-		 angular.forEach(value.labels,function(value,key){
-		 	console.log(value.name);
-
-		 });
-
-
+	$scope.labelValue = function (issuelabels){
+	angular.forEach(issuelabels, function(value,key){
+		  //console.log(issuelabels);
+		  var dp
+		  //console.log(value.name);
+		  if (value.name == "DP") {dp = true}
+		  	return dp;
+		  	console.log(dp);
 		});
-   };
-
+	   };
 
 
 
