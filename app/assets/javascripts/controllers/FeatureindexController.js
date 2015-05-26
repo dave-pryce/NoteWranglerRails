@@ -15,9 +15,13 @@ angular.module('NoteWrangler').controller('FeatureindexController', function(Fea
 		  //console.log(issuelabels);
 		  var dp
 		  //console.log(value.name);
-		  if (value.name == "DP") {dp = true}
-		  	return dp;
+		  if (value.name == "DP") {
+		  	dp = value.name + " is true";
 		  	console.log(dp);
+		  	return dp;
+		  }
+		
+		  	
 		});
 	   };
 

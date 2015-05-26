@@ -30,6 +30,7 @@
 
 	<div ng-class="labelValue(issue.labels) ? 'panel panel-primary' : 'panel panel-default'">
 		<div class="panel-heading">
+		{{labelValue(issue.labels)}}
 		<strong>{{issue.number}}</strong>. {{issue.title}}
 		</div>
 		<div class="panel-body" ng-show="'{{issue.body}}'">
