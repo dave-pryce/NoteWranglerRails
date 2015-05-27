@@ -10,21 +10,23 @@ angular.module('NoteWrangler').controller('FeatureindexController', function(Fea
 		if (label.name == "DP") {return true};
 	};
 
+
 	$scope.labelValue = function (issuelabels){
 	angular.forEach(issuelabels, function(value,key){
 		  //console.log(issuelabels);
-		  var dp
+
 		  //console.log(value.name);
 		  if (value.name == "DP") {
-		  	dp = value.name + " is true";
-		  	console.log(dp);
-		  	return dp;
-		  }
-		
-		  	
-		});
-	   };
+		  console.log("DP");
+		  return true;
+		  };
 
+		  if (value.name == "STB") {
+		  console.log("STB");
+		  };
+		  
+	});
+	};
 
 
 });
