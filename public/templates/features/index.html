@@ -2,6 +2,7 @@
 	
 	<div class="panel-heading">
 	<h1> List of NoteWrangler App features from <a href="https://github.com/dave-pryce/NoteWranglerRails">GitHub</a> Repo</h1>
+	<p ng-show="issues.$resolved"><span class="badge">{{issues.length}}</span> Features<p>
 	</div>
 
 	<div class="panel-body">
@@ -27,10 +28,14 @@
  
 
 <div class="col-sm-6 col-lg-3" ng-repeat="issue in issues | filter:search.input" >
-	{{labelValue(issue.labels)}}
+	
 
 	<div ng-class="labelValue(issue.labels) ? 'panel panel-primary' : 'panel panel-default'">
 		<div class="panel-heading">
+
+
+		<p ng-repeat="label in issue.labels">{{ labelValue(issue.labels) }}</p>
+
 		<strong>{{issue.number}}</strong>. {{issue.title}}
 		</div>
 		<div class="panel-body" ng-show="'{{issue.body}}'">
@@ -41,6 +46,7 @@
 		<!--div class="panel-footer"-->
 
 		<div ng-class="isDP(label) ? 'panel-footer dp' : 'panel-footer'">
+			{{isDP(label)}}
 
 		<span class="glyphicon glyphicon-tag"></span> {{label.name}}
 		<!--div ng-if="isDP(label)"></div-->

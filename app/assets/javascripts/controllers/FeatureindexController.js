@@ -12,18 +12,18 @@ angular.module('NoteWrangler').controller('FeatureindexController', function(Fea
 
 
 	$scope.labelValue = function (issuelabels){
+	//console.log(issuelabels);
 	angular.forEach(issuelabels, function(value,key){
-		  //console.log(issuelabels);
-
-		  //console.log(value.name);
+ 		  
 		  if (value.name == "DP") {
-		  console.log("DP");
-		  return true;
-		  };
+			//console.log(value.name);
+		  	return true;
+		    };
 
-		  if (value.name == "STB") {
-		  console.log("STB");
-		  };
+	//	  if (value.name == "STB") {
+		  //console.log("STB");
+		  //return "STB";
+	//	  };
 		  
 	});
 	};
