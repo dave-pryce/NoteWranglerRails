@@ -21,38 +21,30 @@
   <div class="rect5"></div>
   Loading
 </div>
-<!---->
-
- </div>
-
- 
-
-<div class="col-sm-6 col-lg-3" ng-repeat="issue in issues | filter:search.input" >
-	
-
-	<div ng-class="labelValue(issue.labels) ? 'panel panel-primary' : 'panel panel-default'">
-		<div class="panel-heading">
 
 
-		<p ng-repeat="label in issue.labels">{{ labelValue(issue.labels) }}</p>
+<!--div ng-repeat="issue in [{ number: 1, title: 'one'}, { number: 2, title: 'two'}]">
+	{{::issueNo(issue)}}
+</div-->
 
-		<strong>{{issue.number}}</strong>. {{issue.title}}
-		</div>
-		<div class="panel-body" ng-show="'{{issue.body}}'">
-		{{issue.body}}
-		</div>
+<div class="col-sm-6 col-lg-3" ng-repeat="issue in issues">
+	 	
+		<div ng-class="::labelValue(issue.labels) ? 'panel panel-primary' : 'panel panel-default'">
+			
+			<div class="panel-heading">
+				<strong>{{issue.number}}</strong>. {{issue.title}}
+			</div>
+				
+			<div class="panel-body" ng-show="'{{issue.body}}'">
+				{{issue.body}}
+			</div>
+			
+			<div ng-repeat="label in issue.labels" ng-class="isDP(label) ? 'panel-footer dp' : 'panel-footer'">
+				<span class="glyphicon glyphicon-tag"></span> {{label.name}}
+			</div>
 		
-		<div ng-repeat="label in issue.labels">
-		<!--div class="panel-footer"-->
-
-		<div ng-class="isDP(label) ? 'panel-footer dp' : 'panel-footer'">
-			{{isDP(label)}}
-
-		<span class="glyphicon glyphicon-tag"></span> {{label.name}}
-		<!--div ng-if="isDP(label)"></div-->
 		</div>
-		</div>
-	</div>
+
 </div>
 
 
