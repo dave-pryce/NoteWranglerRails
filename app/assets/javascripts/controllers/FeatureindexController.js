@@ -2,12 +2,12 @@ angular.module('NoteWrangler').controller('FeatureindexController', function(Fea
 
 // get all data from githubIssue factory
 	$scope.issues = Feature.query();
-	console.log($scope.issues);
+	//console.log($scope.issues);
 	
 	$scope.search = {};
 
 	$scope.isDP = function(label){
-		console.log(label.name);
+		//console.log(label.name);
 		if (label.name == "DP") {return true};
 	};
 
@@ -23,14 +23,17 @@ angular.module('NoteWrangler').controller('FeatureindexController', function(Fea
 
 	$scope.labelValue = function (issuelabels){ 
 	//console.log(issuelabels);
+	var dp
 	angular.forEach(issuelabels, function(value,key){
 		//console.log(issue.number + ' ' + value.name);
- 		  if (value.name == "DP") {
-			//console.log(value.name);
-		  	return true;
-		   };
-		});
+ 		  if (value.name == "DP") {dp = true};
+ 		  	//console.log(value.name + " " + false);
+ 		});
+		return dp
 	};
+
+
+
 
 
 });
