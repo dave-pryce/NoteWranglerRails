@@ -13,13 +13,6 @@ angular.module('NoteWrangler').controller('FeatureindexController', function(Fea
 
 
 
-	//$scope.issueNo = function(issue){
-	//	console.log(issue.number + " " + issue.title);
-		//return issue.number + " " + issue.title;
-		//return true;
-	//};
-
-
 
 	$scope.labelValue = function (issuelabels){ 
 	//console.log(issuelabels);
@@ -33,7 +26,31 @@ angular.module('NoteWrangler').controller('FeatureindexController', function(Fea
 	};
 
 
+	$scope.filterDP = function(){
+	angular.forEach($scope.issues, function(value,key){
+		var id = value.id
+		//console.log($scope.issues);
+		angular.forEach(value.labels, function(value,key){
+			if (value.name == "DP") {
+			console.log(id + " " + value.name);
+		};
+		});
+	});
 
+	};
+
+	$scope.filterSTB = function(){
+	angular.forEach($scope.issues, function(value,key){
+		var id = value.id
+		//console.log($scope.issues);
+		angular.forEach(value.labels, function(value,key){
+			if (value.name == "STB") {
+			console.log(id + " " + value.name);
+		};
+		});
+	});
+
+	};
 
 
 });
