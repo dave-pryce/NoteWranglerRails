@@ -2,7 +2,11 @@
 	
 	<div class="panel-heading">
 	<h1> List of NoteWrangler App features from <a href="https://github.com/dave-pryce/NoteWranglerRails">GitHub</a> Repo</h1>
-	<p ng-show="issues.$resolved"><span class="badge">{{issues.length}}</span> Features<p>
+	<div ng-show="issues.$resolved">
+	<p><span class="badge">{{issues.length}}</span> Total Features</p>
+	<p><span class="badge">{{filtered.length}}</span> Displayed Features</p>
+	</div>
+
 	</div>
 
 	<div class="panel-body">
@@ -34,7 +38,7 @@
 	{{::issueNo(issue)}}
 </div-->
 
-<div class="col-sm-6 col-lg-3" ng-repeat="issue in issues | filter:search.input.$ | filter:labelFilter">
+<div class="col-sm-6 col-lg-3" ng-repeat="issue in filtered = (issues | filter:search.input.$ | filter:labelFilter)">
 	 	
 		<div ng-class="::labelValue(issue.labels) ? 'panel panel-primary' : 'panel panel-default'">
 			
