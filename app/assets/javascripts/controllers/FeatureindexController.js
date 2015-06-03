@@ -58,4 +58,10 @@ angular.module('NoteWrangler').controller('FeatureindexController', function(Fea
 	};
 
 
+
+	$scope.filterAll = function(){
+	$scope.labelFilter = {};
+	};
+
+
 });
