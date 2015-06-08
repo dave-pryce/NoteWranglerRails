@@ -28,6 +28,12 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (5.2.0)
+      execjs
+      json
+    bootstrap-sass (3.3.4.1)
+      autoprefixer-rails (>= 5.0.0.1)
+      sass (>= 3.2.19)
     builder (3.2.2)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -54,6 +60,7 @@ GEM
     minitest (5.7.0)
     multi_json (1.11.0)
     pg (0.18.2)
+    pg (0.18.2-x86-mingw32)
     polyglot (0.3.5)
     rack (1.5.3)
     rack-test (0.6.3)
@@ -114,6 +121,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bootstrap-sass (~> 3.3.4)
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
