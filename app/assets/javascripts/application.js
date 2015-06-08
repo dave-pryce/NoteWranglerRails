@@ -15,4 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
+//= require angular
+//= require angular-resource
+//= require angular-route
 

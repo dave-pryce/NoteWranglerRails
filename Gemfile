@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
+
+# angular rails
+gem 'angularjs-rails', '~> 1.3.15'
+
 # Postgres db
 gem 'pg'
 
