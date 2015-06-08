@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150428100125) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 20150428100125) do
 
   create_table "notes", force: true do |t|
     t.string   "title"
-    t.text     "content",     limit: 255
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "description"
@@ -30,8 +33,8 @@ ActiveRecord::Schema.define(version: 20150428100125) do
     t.integer  "category_id"
   end
 
-  add_index "notes", ["category_id"], name: "index_notes_on_category_id"
-  add_index "notes", ["user_id"], name: "index_notes_on_user_id"
+  add_index "notes", ["category_id"], name: "index_notes_on_category_id", using: :btree
+  add_index "notes", ["user_id"], name: "index_notes_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
