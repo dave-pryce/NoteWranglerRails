@@ -1,14 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'rails_12factor', group: :production
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 
 # angular rails
-gem 'angularjs-rails', '~> 1.3.15'
+gem 'angularjs-rails'
 
 # Postgres db
-gem 'pg'
+gem 'pg', group: :production
+
+gem 'sqlite3', group: [:development, :test]
 
 gem 'bootstrap-sass', '~> 3.3.4'
 # Use SCSS for stylesheets
