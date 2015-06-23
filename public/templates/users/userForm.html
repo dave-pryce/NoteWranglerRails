@@ -1,0 +1,35 @@
+
+
+	<form name = "userForm" novalidate>
+		<div class="panel-body">
+			
+		<!-- Name text field -->
+			<fieldset class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && userForm.name.$touched }">
+				<label for="Name">Name</label>
+				<input max-length="20" class="form-control" type="text" id="name" name ="name" ng-model="user.name" required>
+				<!--Character counter-->
+				<span class="text-muted pull-right"><small>{{20 - user.name.length}}</small></span>
+				<span ng-show="userForm.name.$invalid && userForm.name.$touched" class="help-block">Name is required.</span>
+			</fieldset>
+
+
+		<!-- Email text field -->
+			<fieldset class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && userForm.email.$touched }">
+				<label for="Name">Email</label>
+				<input max-length="50" class="form-control" type="email" id="email" name ="email" ng-model="user.email" required>
+				<!--Character counter-->
+				<span class="text-muted pull-right"><small>{{50 - user.email.length}}</small></span>
+				<span ng-show="userForm.email.$invalid && userForm.email.$touched" class="help-block">Email is required</span>
+			</fieldset>
+
+		
+		</div>
+
+		<div class="panel-footer">
+		<!-- disable submit if saving or required fields not complete -->
+		<input type="submit" value="{{submitting ? 'saving....' : 'save'}}" class="btn btn-default" ng-click="saveUser(user)" ng-disabled="submitting 
+		|| userForm.name.$invalid">
+		</div>
+
+	</div>
+</form>

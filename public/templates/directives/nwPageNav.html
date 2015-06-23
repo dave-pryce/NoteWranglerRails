@@ -3,17 +3,9 @@
       
 
 	<ul class="nav navbar-nav">
-      <li><a href="/#/"><span class="glyphicon glyphicon-home"></span> NoteWrangler</a></li>
-	    <li ng-class="{'active': isPage('notes')}"><a ng-href="#/notes"><span class="glyphicon glyphicon-list-alt"> </span> Notes</a></li>
-	    <li ng-class="{'active': isPage('users')}"><a ng-href="#/users"><span class="glyphicon glyphicon-user"> </span> Users</a></li>
-	    <li ng-class="{'active': isPage('categories')}"><a ng-href="#/categories"> <span class="glyphicon glyphicon-tags"> </span>  Categories</a></li>
-	</ul>
-	    
-	 <ul class="nav navbar-nav navbar-right">
-	    <li ng-include src="'templates/info.html'"></li>
+      <li><a href="/#/"><span class="glyphicon glyphicon-home"></span> NoteWrangler</a></li>	    
+	  <li class="pull-right" ng-include src="'templates/info.html'"></li>
 	 </ul>
-
-
 
   </div>
 </nav>
