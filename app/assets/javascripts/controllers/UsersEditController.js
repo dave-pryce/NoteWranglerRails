@@ -5,7 +5,7 @@ angular.module('NoteWrangler').controller('UsersEditController', function(User,$
 
 	$scope.saveUser = function(user){
 		$scope.submitting = true;
-		note.$update().finally(function(){
+		user.$update().finally(function(){
 			$scope.submitting = false;
 			$location.path("/users/" + user.id)
 		});
