@@ -22,6 +22,16 @@
 				<span ng-show="userForm.email.$invalid && userForm.email.$touched" class="help-block">Email is required</span>
 			</fieldset>
 
+
+			<!-- Password field -->
+			<fieldset class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && userForm.password.$touched }">
+				<label for="Name">Password</label>
+				<input max-length="50" class="form-control" type="password" id="password" name ="password" ng-model="user.password_digest" required>
+				<!--Character counter-->
+				<span class="text-muted pull-right"><small>{{50 - user.password.length}}</small></span>
+				<span ng-show="userForm.password.$invalid && userForm.password.$touched" class="help-block">Password is required</span>
+			</fieldset>
+
 		
 		</div>
 
