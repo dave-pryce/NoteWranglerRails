@@ -38,7 +38,9 @@
 		<div class="panel-footer">
 		<!-- disable submit if saving or required fields not complete -->
 		<input type="submit" value="{{submitting ? 'saving....' : 'save'}}" class="btn btn-default" ng-click="saveUser(user)" ng-disabled="submitting 
-		|| userForm.name.$invalid">
+		|| userForm.name.$invalid
+		|| userForm.email.$invalid
+		|| userForm.password.$invalid">
 		</div>
 
 	</div>
