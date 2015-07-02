@@ -5,7 +5,7 @@ class Note < ActiveRecord::Base
 	belongs_to :user
 
 	# Validation
-	validates :title, presence: true , length: (maximum: 50 )
+	validates :title, presence: true
 	validates :description, presence: true 
 	validates :content, presence: true 
 	validates :user_id, presence: true 

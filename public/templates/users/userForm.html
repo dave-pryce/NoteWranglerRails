@@ -15,11 +15,21 @@
 
 		<!-- Email text field -->
 			<fieldset class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && userForm.email.$touched }">
-				<label for="Name">Email</label>
+				<label for="Email">Email</label>
 				<input max-length="50" class="form-control" type="email" id="email" name ="email" ng-model="user.email" required>
 				<!--Character counter-->
 				<span class="text-muted pull-right"><small>{{50 - user.email.length}}</small></span>
 				<span ng-show="userForm.email.$invalid && userForm.email.$touched" class="help-block">Email is required</span>
+			</fieldset>
+
+
+			<!-- site text field -->
+			<fieldset class="form-group" ng-class="{ 'has-error' : userForm.site.$invalid && userForm.site.$touched }">
+				<label for="Site">Site</label>
+				<input max-length="50" class="form-control" type="text" id="site" name ="site" ng-model="user.site" required>
+				<!--Character counter-->
+				<span class="text-muted pull-right"><small>{{50 - user.email.length}}</small></span>
+				<span ng-show="userForm.site.$invalid && userForm.site.$touched" class="help-block">Email is required</span>
 			</fieldset>
 
 
@@ -32,6 +42,15 @@
 				<span ng-show="userForm.password.$invalid && userForm.password.$touched" class="help-block">Password is required</span>
 			</fieldset>
 
+			<!-- Password Confirmation field -->
+			<fieldset class="form-group" ng-class="{ 'has-error' : userForm.password_confirmation.$invalid && userForm.password_confirmation.$touched }">
+				<label for="Name">Password Confirmation</label>
+				<input max-length="50" class="form-control" type="password" id="password_confirmation" name ="password_confirmation" ng-model="user.password_confirmation" required>
+				<!--Character counter-->
+				<span class="text-muted pull-right"><small>{{50 - user.password_confirmation.length}}</small></span>
+				<span ng-show="userForm.password_confirmation.$invalid && userForm.password_confirmation.$touched" class="help-block">Please re-enter your password</span>
+			</fieldset>
+
 		
 		</div>
 
@@ -40,7 +59,8 @@
 		<input type="submit" value="{{submitting ? 'saving....' : 'save'}}" class="btn btn-default" ng-click="saveUser(user)" ng-disabled="submitting 
 		|| userForm.name.$invalid
 		|| userForm.email.$invalid
-		|| userForm.password.$invalid">
+		|| userForm.password.$invalid
+		|| userForm.password_confimation.$invalid">
 		</div>
 
 	</div>
