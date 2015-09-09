@@ -11,7 +11,8 @@ gem 'angularjs-rails'
 # Postgres db
 gem 'pg', group: :production
 
-gem 'sqlite3', group: [:development, :test]
+gem 'sqlite3', '~> 1.3.9', group: [:development, :test]
+
 
 gem 'bootstrap-sass', '~> 3.3.4'
 # Use SCSS for stylesheets
